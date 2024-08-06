@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
   var getUrlParam = function(e){var t = new RegExp("[?&]" + e.replace(/[\[\]]/g, "\\$&") + "(=([^&#]*)|&|#|$)"),a = t.exec(window.location.href);return a && a[2] ? decodeURIComponent(a[2].replace(/\+/g, " ")) : ""};
   var domain = location.hostname,
   site_domain,
@@ -14,7 +18,7 @@
   } else {
     lang = 'en-us';
   }
-  site_domain = 'audience-insights.support.brightcove.com';
+  site_domain = '{{ site.site_domain }}';
   console.log('site domain', site_domain);
   filter = "domain='" + site_domain +  "'";
 lang_filter = "lang='" + lang + "'";
